@@ -5,14 +5,17 @@ to implement specific components however your whole circuit must be operable and
 the buttons and display components in this file. That is, your solution should not require any
 additional interface components (e.g., buttons, displays, pins etc) in order to test the functionality of
 your circuit.
+
 Logisim Version
 Your assignment must be implemented using Logisim Evolution 3.8.0, which can be downloaded
 from: https://github.com/logisim-evolution/logisim-evolution/releases
 This is the version we will test with, and we will not be using any other version, or making special
 accommodations. If your solution is incompatible with ours, it will not be able to be tested and thus
 will be ineligible for most marks on offer.
+
 You can verify that your version is correct by loading the provided main.circ file with the interface as
 shown above.
+
 Allowable Logisim Components
 Only the following components may be used to develop your solution:
 - Logic Gates: any
@@ -24,33 +27,41 @@ Only the following components may be used to develop your solution:
 - Pins (for connecting circuits)
 - Constants (for setting inputs that will not change)
 - Splitter (for using HEX Digit Display)
+  
 The use of any other components will be penalised – in particular, you must not use any pre-built
 circuits such as registers, shift registers, etc).
 Assignment Stages
+
 To break the problem down, you will implement the functionality of the stopwatch in stages. Each
 stage has a percentage weighting of marks contributing to the overall total of 100% You should
 implement each stage in order, and upon completion of each stage, save your file using the naming
 convention: stageX.circ.
+
 This assignment will take a long time to complete in full. You should start early and work
 methodically through each stage. Note however that a good mark for this assignment does not
 require all stages being complete. In particular, Stages 6 and 7 are considered more advanced,
 Stage 1: Implement the Start/Stop button (10% of total marks)
 Using the Start/Stop button provided in main.circ, wire up a simple circuit that toggles between the
 Start and Stop states every time the button is clicked. Your solution should:
+
 - Use the “Clock Started” LED and ensure it is turned on when in the Stopwatch is in the Start
 state, and off when in the Stop state,
 - Make use of a Flip Flop to keep track of the current state.
+
+
 Stage 2: Implement a single digit “Seconds” display (15% of total marks)
 This stopwatch will provide 1 second precision, and so needs to display the number of seconds that
 have elapsed since the Start button was pressed. As such, this will require the implementation of a
 counter. You will start by implementing a single digit “Seconds” counter for the units column of the
 “Seconds” display. That is, a counter that increments the “Seconds” display by 1s every clock tick,
 between “0” and “9”. Specifically:
+
 - Replace your flashing LED in Stage 1 with a counter that keeps track of the number of
 “seconds” (in increments of 1s, between 0s and 9s).
 - The “Seconds” display should start from “00” when the Start/Stop button is first pressed
 - The “Seconds” display should Stop when the Start/Stop button is pressed in the Start state.
 - The “Seconds” display should resume counting when the Start/Stop button is pressed in the
+  
 Stop state
 For this stage you can assume a single clock pulse equals 1s, and the display will only show the
 units column in seconds. As such, your “Seconds” display should only show values: “00, 01, 02, 03,
